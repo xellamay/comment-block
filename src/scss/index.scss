@@ -1,0 +1,46 @@
+@import "mixins";
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 15px;
+
+  &__title {
+    @include title;
+  }
+
+  &__button {
+    @include text;
+
+    padding: 10px 20px;
+    background: transparent;
+  }
+}
+
+.list {
+
+  padding: 0;
+
+  &__item {
+    list-style-type: none;
+
+    &-name {
+      @include title;
+    }
+
+    &-comment {
+      @include text;
+    }
+  }
+}

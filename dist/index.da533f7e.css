@@ -1,0 +1,53 @@
+.comments {
+  flex-direction: column;
+  row-gap: 30px;
+  display: flex;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form {
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 15px;
+  display: flex;
+}
+
+.form__title {
+  font-family: Comfortaa;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.form__button {
+  background: none;
+  padding: 10px 20px;
+  font-family: Comfortaa;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.list {
+  padding: 0;
+}
+
+.list__item {
+  list-style-type: none;
+}
+
+.list__item-name {
+  font-family: Comfortaa;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.list__item-comment {
+  font-family: Comfortaa;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=index.da533f7e.css.map */
