@@ -6,8 +6,9 @@
   row-gap: 30px;
 }
 .container {
-  max-width: 800px;
   margin: 0 auto;
+
+  max-width: 800px;
 }
 
 .form {
@@ -20,27 +21,110 @@
     @include title;
   }
 
-  &__button {
+  &__comment {
     @include text;
 
+    padding: 10px;
+
+    width: 100%;
+  }
+
+}
+
+.button {
+  @include text;
+
+  cursor: pointer;
+
+  &_form {
     padding: 10px 20px;
+
+    background: transparent;
+  }
+
+  &_edit {
+    border: none;
+    background: transparent;
+
+    font-size: 14px;
+    color: rgb(69, 90, 158);
+  }
+
+  &_edit:hover {
+    text-decoration: underline;
+  }
+
+  &_like {
+    padding: 0;
+    border: none;
     background: transparent;
   }
 }
 
-.list {
+.button:hover {
+    border-color: rgb(69, 90, 158);
+    color: rgb(69, 90, 158);
+}
 
+.list {
   padding: 0;
 
   &__item {
+    margin: 20px 0;
+    
     list-style-type: none;
+  }
+}
 
-    &-name {
-      @include title;
-    }
+.comment {
+  position: relative;
 
-    &-comment {
-      @include text;
-    }
+  &__name {
+    @include title;
+  }
+
+  &__text {
+    @include text;
+
+    margin: 10px 0;
+  }
+
+  &__data {
+    @include text;
+
+    font-size: 14px;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__like {
+    @include text;
+
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+
+    font-size: 14px;
+  }
+}
+
+.comment::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -13px;
+  height: 1px;
+  width: 100%;
+  background: rgb(61, 59, 59);
+}
+
+.svg {
+  &_like {
+    width: 18px;
+    height: 18px;
   }
 }

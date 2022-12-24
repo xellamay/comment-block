@@ -14,18 +14,34 @@
         <div class="comments">
           <form class="form" action="">
             <label class="form__title" for="comment">Введите свой комментарий:</label>
-            <textarea id="comment" rows="5" cols="50"></textarea>
-            <button class="form__button">Отправить</button>
+            <textarea class="form__comment" id="comment" rows="5" cols="50"></textarea>
+            <button class="button button_form">Отправить</button>
           </form>
           <ul class="list">
             <li class="list__item">
-              <div class="list__item-name">Катя</div>
-              <div class="list__item-comment">blabla</div>
+              <div class="comment">
+                <div class="comment__name">Катя</div>
+                <div class="comment__text">blabla</div>
+                <div class="comment__footer">
+                  <div class="comment__edit">
+                    <time class="comment__data" datetime="2022-05-15 19:00">15 мая 19:00</time>
+                    <button class="button button_edit">Удалить</button>
+                    <button class="button button_edit">Редактировать</button>
+                  </div>
+                  <div class="comment__like">
+                    <button class="button button_like">
+                      <img class="svg svg_like" src="/heart-svgrepo-com.10e370d5.svg" alt="like">
+                    </button>
+                    <div class="count">0</div>
+                 </div>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
       </div>
     </section>
     
-  <script src="/comment-block.59712999.js"></script></body>
+    <script src="/index.64a4978e.js" defer=""></script>
+  </body>
   </html>
