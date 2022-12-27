@@ -12,13 +12,18 @@
     <section class="section">
       <div class="container">
         <div class="comments">
-          <form class="form" action="">
+          <form class="form" id="form" action="">
             <label class="form__title" for="comment">Введите свой комментарий:</label>
-            <textarea class="form__comment" id="comment" rows="5" cols="50"></textarea>
-            <button class="button button_form">Отправить</button>
+            <textarea 
+              class="form__comment" 
+              name="comment"
+              rows="5"
+              autofocus
+            ></textarea>
+            <button class="button button_form" type="submit">Отправить</button>
           </form>
           <ul class="list">
-            <li class="list__item">
+            <!-- <li class="list__item">
               <div class="comment">
                 <div class="comment__name">Катя</div>
                 <div class="comment__text">blabla</div>
@@ -36,7 +41,7 @@
                  </div>
                 </div>
               </div>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
