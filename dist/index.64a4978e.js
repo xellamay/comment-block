@@ -541,6 +541,7 @@ function init() {
 }
 function renderCommentList(comments) {
     const listComment = document.querySelector(".list");
+    listComment.innerHTML = ``;
     comments.forEach((comment)=>{
         const newNode = createComment(comment);
         listComment.prepend(newNode);
@@ -556,7 +557,7 @@ function createComment(comment) {
     <div class="comment__footer">
       <div class="comment__edit">
         <time class="comment__data" datetime="${comment.created}">${comment.created}</time>
-        <button class="button button_edit">Удалить</button>
+        <button class="button button_edit button_delete">Удалить</button>
         <button class="button button_edit">Редактировать</button>
       </div>
       <div class="comment__like">
@@ -568,6 +569,8 @@ function createComment(comment) {
     </div>
    </div>
   `;
+    const deleteBtn = node.querySelector(".button_delete");
+    deleteBtn.onclick = ()=>deleteComment(comment);
     return node;
 }
 function addComment() {
@@ -588,6 +591,12 @@ function addComment() {
             form.reset();
         }
     });
+}
+function deleteComment(comment) {
+    const index = comments.indexOf(comment);
+    console.log(index);
+    if (index !== -1) comments.splice(index, 1);
+    renderCommentList(comments);
 }
 
 },{"uuid":"j4KJi"}],"j4KJi":[function(require,module,exports) {
