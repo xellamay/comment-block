@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .comments {
   flex-direction: column;
   row-gap: 30px;

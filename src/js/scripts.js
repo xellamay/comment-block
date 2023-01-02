@@ -1,4 +1,5 @@
 import { v4 as uuid } from "uuid";
+import { getDateTimeNow, formatDateTimeToHuman } from "./dateTime";
 
 document.addEventListener("DOMContentLoaded", init);
 
@@ -31,7 +32,7 @@ function createComment(comment) {
     
     <div class="comment__footer">
       <div class="comment__edit">
-        <time class="comment__data" datetime="${comment.created}">${comment.created}</time>
+        <time class="comment__data" datetime="${comment.created}">${formatDateTimeToHuman(comment.created)}</time>
         <button class="button button_ection button_delete">Удалить</button>
         ${comment.isEditing === false
           ? `<button class="button button_ection button_edit ">Редактировать</button>`
@@ -87,7 +88,7 @@ function addComment() {
         id: uuid(),
         userName: "userName",
         text: textArea.value,
-        created: "15 мая 19:00",
+        created: getDateTimeNow(),
         likeCount: 0,
         isEditing: false,
       })
