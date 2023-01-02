@@ -42,7 +42,7 @@
   padding: 10px 20px;
 }
 
-.button_edit {
+.button_ection {
   color: #455a9e;
   background: none;
   border: none;
@@ -88,6 +88,11 @@
   font-family: Comfortaa;
   font-size: 18px;
   font-weight: 400;
+}
+
+.comment__text_edit {
+  width: 100%;
+  padding: 10px;
 }
 
 .comment__data {

@@ -42,7 +42,7 @@
     background: transparent;
   }
 
-  &_edit {
+  &_ection {
     border: none;
     background: transparent;
 
@@ -87,6 +87,11 @@
     @include text;
 
     margin: 10px 0;
+
+    &_edit {
+      width: 100%;
+      padding: 10px;
+    }
   }
 
   &__data {
